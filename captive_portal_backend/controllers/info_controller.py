@@ -29,6 +29,8 @@ def add_info():
         is_student = request.json.get('is_student')
         phone = request.json.get('phone')
         need = request.json.get('need')
+        current_class = request.json.get('current_class')
+        address = request.json.get('address')
 
         code = str(random.randint(1000, 9999))
         while list_code.count(code) > 0:
@@ -37,7 +39,7 @@ def add_info():
 
 
         print(list_code)
-        new_info = info(name, is_student, phone, need)
+        new_info = info(name, is_student, current_class, address, phone, need)
 
         db.session.add(new_info)
         db.session.commit();
@@ -46,13 +48,13 @@ def add_info():
     except:
         return jsonify(
             error_code="2",
-            message="Adding failed."
+            message="Thông tin chưa đầy đủ"
         )
 
     # tien hanh gui den so nguoi dung thong qua tin nhan
     return jsonify(
         error_code=0,
-        message="Adding completed.",
+        message="Thành Công",
         validate_code=code
 
     )
@@ -65,12 +67,12 @@ def check_number():
         #so dien thoai chinh xac
         return jsonify(
             error_code = 0,
-            message = 'Success'
+            message = 'Thành Công'
         )
     else:
         #so dien thoai khong chinh xac
         return jsonify(
             error_code = 3,
-            message = 'Fail'
+            message = 'Thất Bại'
         )
 

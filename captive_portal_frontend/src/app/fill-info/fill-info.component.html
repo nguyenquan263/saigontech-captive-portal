@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card bg-light">
+      <div class="card-header">
+        <h3>Thông tin người dùng</h3>
+      </div>
+      <div class="card-body">
+
+        <div class="container">
+          <b>
+            <label id="errorLabel" style="color: red"></label>
+          </b>
+          <form>
+            <div class="form-group mb-3">
+              <label for="name">Họ và Tên: </label>
+              <input type="text" class="form-control" id="name" placeholder="Điền họ tên bạn vào đây">
+            </div>
+
+            <div class="form-check ">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="1" name="role" id="isStudent" (click)="showClass()">Tôi là học sinh.
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="0" name="role" id="isParent" (click)="hideClass()">Tôi là phụ huynh.
+              </label>
+            </div>
+
+            <div class="form-group mb-3" id="classContent">
+              <label for="name">Lớp: </label>
+              <input type="text" class="form-control" id="current_class" placeholder="Bạn học lớp mấy ?">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="name">Địa chỉ: </label>
+              <input type="text" class="form-control" id="address" placeholder="Điền địa chỉ của bạn vào đây">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="name">Số điện thoại: </label>
+              <input type="text" class="form-control" id="phone" placeholder="Điền sdt của bạn vào đây">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="name">Bạn muốn biết những thông tin gì về trường SaigonTech ? : </label>
+              <input type="text" class="form-control" id="need" placeholder="Điền thông tin bạn muốn biết vào đây">
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="container">
+          <button type="submit" class="btn btn-primary" (click)="finishButtonAction()">Hoàn thành</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
