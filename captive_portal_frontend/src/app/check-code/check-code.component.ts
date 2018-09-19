@@ -25,7 +25,7 @@ export class CheckCodeComponent implements OnInit {
         validate_number: digit
       }
 
-    this.info.checkDidgit(validDigit, $);
+    this.info.checkDigit(validDigit, $);
   }
 
 }

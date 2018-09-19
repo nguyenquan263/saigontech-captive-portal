@@ -25,7 +25,7 @@ export class InfoService {
     });
   }
 
-  checkDidgit(digit: any, $: any){
+  checkDigit(digit: any, $: any){
     console.log(digit);
     return this.http.post(this.connectionLink.getConnection()+'/check ', digit)
     .toPromise()
