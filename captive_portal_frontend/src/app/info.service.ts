@@ -18,6 +18,7 @@ export class InfoService {
       console.log(resJson);
       if (resJson.error_code == 0){
         this.router.navigate(['check']);
+        this.cookie.set('currentPhone', newInfo.phone);
       }
       else{
         $("#errorLabel").text(resJson.message);
@@ -33,6 +34,23 @@ export class InfoService {
     .then(resJson => {
       alert(resJson.message);
     });
+  }
+  
+  resendDigit(){
+
+    var data = {
+        "phone_number": this.cookie.get('currentPhone')
+
+    }
+
+    return this.http.post(this.connectionLink.getConnection()+'/send ', data)
+    .toPromise()
+    .then(res =>res.json())
+    .then(resJson => {
+      console.log(resJson);
+      alert(resJson.message);
+    });
+
   }
 
 }

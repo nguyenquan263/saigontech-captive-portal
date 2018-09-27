@@ -27,5 +27,9 @@ export class CheckCodeComponent implements OnInit {
 
     this.info.checkDigit(validDigit, $);
   }
+  
+  resendButtonAction(){
+	  this.info.resendDigit();
+  }
 
 }

@@ -7,7 +7,7 @@ export class ConnectionService {
 
   getConnection():string{
 
-    return 'http://localhost:8080';
+    return 'http://10.19.1.44:8080';
   }
 
 }
