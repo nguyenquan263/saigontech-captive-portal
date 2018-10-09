@@ -13,3 +13,4 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 list_code = []
+list_phone = []
