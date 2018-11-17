@@ -1,5 +1,0 @@
-flask
-flask_sqlalchemy
-flask_marshmallow
-flask_cors
-marshmallow_sqlalchemy
